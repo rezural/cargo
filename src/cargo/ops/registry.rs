@@ -902,7 +902,7 @@ pub fn search(
     if total_crates > limit && limit < search_max_limit {
         drop_println!(
             config,
-            "... and {} crates more (use --limit N to see more)",
+            "#... and {} crates more (use --limit N to see more)",
             total_crates - limit
         );
     } else if total_crates > limit && limit >= search_max_limit {
