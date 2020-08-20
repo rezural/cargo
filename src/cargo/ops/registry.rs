@@ -908,7 +908,7 @@ pub fn search(
     } else if total_crates > limit && limit >= search_max_limit {
         let extra = if source_id.is_default_registry() {
             format!(
-                " (go to https://crates.io/search?q={} to see more)",
+                "# (go to https://crates.io/search?q={} to see more)",
                 percent_encode(query.as_bytes(), NON_ALPHANUMERIC)
             )
         } else {
@@ -916,7 +916,7 @@ pub fn search(
         };
         drop_println!(
             config,
-            "... and {} crates more{}",
+            "#... and {} crates more{}",
             total_crates - limit,
             extra
         );
